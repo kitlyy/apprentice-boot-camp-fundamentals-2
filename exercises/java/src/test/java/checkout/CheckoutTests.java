@@ -1,17 +1,15 @@
 package checkout;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
-import static org.assertj.core.api.Assertions.*;
-
-public class CheckoutTests {
-
+class CheckoutTests {
     @Test
     public void oneA() {
         Checkout checkout = new Checkout();
 
         checkout.scan("A");
-        assertThat(checkout.total()).isEqualTo(50);
+        Assertions.assertEquals(50, checkout.total());
     }
 
     @Test
@@ -20,7 +18,8 @@ public class CheckoutTests {
 
         checkout.scan("A");
         checkout.scan("A");
-        assertThat(checkout.total()).isEqualTo(100);
+        Assertions.assertEquals(100, checkout.total());
+
     }
 
     @Test
@@ -30,9 +29,8 @@ public class CheckoutTests {
         checkout.scan("A");
         checkout.scan("A");
         checkout.scan("A");
-        assertThat(checkout.total()).isEqualTo(130);
+        Assertions.assertEquals(130, checkout.total());
     }
-
 
     @Test
     public void sixA() {
@@ -44,7 +42,7 @@ public class CheckoutTests {
         checkout.scan("A");
         checkout.scan("A");
         checkout.scan("A");
-        assertThat(checkout.total()).isEqualTo(260);
+        Assertions.assertEquals(260, checkout.total());
     }
 
     @Test
@@ -52,7 +50,7 @@ public class CheckoutTests {
         Checkout checkout = new Checkout();
 
         checkout.scan("B");
-        assertThat(checkout.total()).isEqualTo(30);
+        Assertions.assertEquals(30, checkout.total());
     }
 
     @Test
@@ -61,7 +59,8 @@ public class CheckoutTests {
 
         checkout.scan("B");
         checkout.scan("B");
-        assertThat(checkout.total()).isEqualTo(45);
+        Assertions.assertEquals(45, checkout.total());
+
     }
 
     @Test
@@ -72,64 +71,63 @@ public class CheckoutTests {
         checkout.scan("B");
         checkout.scan("B");
         checkout.scan("B");
-        assertThat(checkout.total()).isEqualTo(90);
+        Assertions.assertEquals(90, checkout.total());
     }
 
     @Test
     public void simple() {
         Checkout checkout = new Checkout();
-        
+
         checkout.scan("A");
-        assertThat(checkout.total()).isEqualTo( 50);
-        
+        Assertions.assertEquals(50, checkout.total());
         checkout.scan("B");
-        assertThat(checkout.total()).isEqualTo( 80);
-        
+        Assertions.assertEquals(80, checkout.total());
         checkout.scan("C");
-        assertThat(checkout.total()).isEqualTo(100);
-        
+        Assertions.assertEquals(100, checkout.total());
         checkout.scan("D");
-        assertThat(checkout.total()).isEqualTo(115);
+        Assertions.assertEquals(115, checkout.total());
+
     }
 
     @Test
     public void incremental() {
         Checkout checkout = new Checkout();
-        
+
         checkout.scan("A");
-        assertThat(checkout.total()).isEqualTo( 50);
-        
+        Assertions.assertEquals(50, checkout.total());
+
         checkout.scan("B");
-        assertThat(checkout.total()).isEqualTo( 80);
-        
+        Assertions.assertEquals(80, checkout.total());
+
         checkout.scan("A");
-        assertThat(checkout.total()).isEqualTo(130);
-        
+        Assertions.assertEquals(130, checkout.total());
+
         checkout.scan("A");
-        assertThat(checkout.total()).isEqualTo(160);
-        
+        Assertions.assertEquals(160, checkout.total());
+
         checkout.scan("B");
-        assertThat(checkout.total()).isEqualTo(175);
-        
+        Assertions.assertEquals(175, checkout.total());
+
         checkout.scan("C");
-        assertThat(checkout.total()).isEqualTo(195);
-        
+        Assertions.assertEquals(195, checkout.total());
+
         checkout.scan("B");
-        assertThat(checkout.total()).isEqualTo(225);
-        
+        Assertions.assertEquals(225, checkout.total());
+
         checkout.scan("C");
-        assertThat(checkout.total()).isEqualTo(245);
-        
+        Assertions.assertEquals(245, checkout.total());
+
         checkout.scan("D");
-        assertThat(checkout.total()).isEqualTo(260);
-        
+        Assertions.assertEquals(260, checkout.total());
+
         checkout.scan("D");
-        assertThat(checkout.total()).isEqualTo(275);
-        
+        Assertions.assertEquals(275, checkout.total());
+
         checkout.scan("D");
-        assertThat(checkout.total()).isEqualTo(290);
-        
+        Assertions.assertEquals(290, checkout.total());
+
         checkout.scan("C");
-        assertThat(checkout.total()).isEqualTo(310);
+        Assertions.assertEquals(310, checkout.total());
+
     }
 }

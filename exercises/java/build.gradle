@@ -1,14 +1,23 @@
+plugins {
+    id 'java'
+}
+
+group = 'com.mdigital'
+version = '1.0-SNAPSHOT'
+
 repositories {
     mavenCentral()
 }
 
-apply plugin: 'java'
-sourceCompatibility = JavaVersion.VERSION_17
-targetCompatibility = JavaVersion.VERSION_17
-apply plugin: 'idea'
-
 dependencies {
-    implementation 'commons-codec:commons-codec:1.15'
-    testImplementation 'junit:junit:4.11'
-    testImplementation 'org.assertj:assertj-core:3.9.1'
-} 
+    // Source: https://mvnrepository.com/artifact/commons-codec/commons-codec
+    implementation 'commons-codec:commons-codec:1.22.0'
+
+    testImplementation platform('org.junit:junit-bom:6.0.0')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+}
+
+test {
+    useJUnitPlatform()
+}

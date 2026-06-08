@@ -1,6 +1,6 @@
 package checkout;
 
-class Receipt {
+public class Receipt {
 
     private String text = "";
     private int numberOfA = 0;
@@ -44,4 +44,6 @@ class Receipt {
         text += "D: 15\n";
         total += 15;
     }
+
+
 }

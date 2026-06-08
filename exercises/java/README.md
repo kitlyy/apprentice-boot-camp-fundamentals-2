@@ -1,11 +1,8 @@
 ## Setting up
 
-We’re anticipating you using [Intellij IDEA](https://www.jetbrains.com/idea). You can downloading it [here](https://www.jetbrains.com/idea/download/). The ‘Community’ version is fine, if you don't have a license for ‘Ultimate’.
+We’re anticipating you using [Intellij IDEA](https://www.jetbrains.com/idea). You can download it [here](https://www.jetbrains.com/idea/download/). The ‘Community’ version is fine, if you don't have a license for ‘Ultimate’.
 
-You’ll need Java 8 or later. If for some reason you don’t already have it, you can either:
-- `brew install java` (if you are on macOS and use `brew`)
-- `sdk install java` (if you use [sdkman](https://sdkman.io/))
-- install it yourself from [here](https://aws.amazon.com/corretto/)
+You’ll need Java 25. Which you already have.
 
 ## Running the tests
 

@@ -5,15 +5,15 @@ import org.apache.commons.codec.binary.Hex;
 
 import java.nio.charset.StandardCharsets;
 
-class Thingy {
+public class Thingy {
 
     private int foo;
     private int bar;
     private int foobar = new int[]{0, 0, 0, 0, 0}.length;
 
     String doTheThing() {
-        String s = "";
-        for (; foo < Byte.MAX_VALUE - 27; foo++) s += b(foo) + " ";
+        StringBuilder s = new StringBuilder();
+        for (; foo < Byte.MAX_VALUE - 27; foo++) s.append(b(foo)).append(" ");
         return s.substring(0, s.length() - 1);
     }
 
