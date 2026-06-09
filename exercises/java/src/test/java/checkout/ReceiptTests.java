@@ -19,7 +19,12 @@ class ReceiptTests {
         checkout.scan("B");
         checkout.scan("C");
         checkout.scan("D");
-        Assertions.assertEquals("A: 50\nB: 30\nC: 20\nD: 15\nTotal: 115", checkout.receipt());
+        Assertions.assertEquals(
+                "A: 50\n" +
+                "B: 30\n" +
+                "C: 20\n" + "D: 15\n" +
+                "Total: 115",
+                checkout.receipt());
     }
 
     @Test
