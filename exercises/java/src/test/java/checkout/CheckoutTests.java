@@ -76,7 +76,7 @@ class CheckoutTests {
 
     @Test
     public void simple() {
-        Checkout checkout = new Checkout();
+        Checkout checkout= new Checkout();
 
         checkout.scan("A");
         Assertions.assertEquals(50, checkout.total());

@@ -6,6 +6,8 @@ import org.apache.commons.codec.binary.Hex;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
+import java.nio.charset.StandardCharsets;
+
 public class ThingyTest {
     @Test
     public void itWorks() throws DecoderException {
@@ -21,7 +23,8 @@ public class ThingyTest {
                         "36312036322046697a7a2036342042757a7a2046697a7a2036372036382046697a7a2042757a7a203731" +
                         "2046697a7a2037332037342046697a7a42757a7a2037362037372046697a7a2037392042757a7a204669" +
                         "7a7a2038322038332046697a7a2042757a7a2038362046697a7a2038382038392046697a7a42757a7a20" +
-                        "39312039322046697a7a2039342042757a7a2046697a7a2039372039382046697a7a2042757a7a")),
+                        "39312039322046697a7a2039342042757a7a2046697a7a2039372039382046697a7a2042757a7a"),
+                        StandardCharsets.UTF_8),
                 thingy.doTheThing());
     }
 }
