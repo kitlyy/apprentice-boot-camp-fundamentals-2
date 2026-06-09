@@ -12,6 +12,22 @@ class ReceiptTests {
     }
 
     @Test
+    public void singleItemMethodTwo() {
+        Checkout checkout = new Checkout();
+        checkout.scan("A");
+        String expected =  "A: 50\nTotal: 50";
+        Assertions.assertTrue(checkout.receipt().equals(expected));
+    }
+
+    @Test
+    public void singleItemMethodThree() {
+        Checkout checkout = new Checkout();
+        checkout.scan("A");
+        String expected =  "A: 50\nTotal: 50";
+        Assertions.assertTrue(checkout.receipt().contains(expected));
+    }
+
+    @Test
     public void oneOfEach() {
         Checkout checkout = new Checkout();
 
@@ -22,7 +38,8 @@ class ReceiptTests {
         Assertions.assertEquals(
                 "A: 50\n" +
                 "B: 30\n" +
-                "C: 20\n" + "D: 15\n" +
+                "C: 20\n" +
+                "D: 15\n" +
                 "Total: 115",
                 checkout.receipt());
     }
@@ -46,6 +63,7 @@ class ReceiptTests {
                 C: 20
                 D: 15
                 B: 30 - 15 (2 for 45)
-                Total: 210""",  checkout.receipt());
+                Total: 210""",
+                checkout.receipt());
     }
 }
