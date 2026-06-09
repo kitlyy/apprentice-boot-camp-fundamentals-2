@@ -16,6 +16,7 @@ class ReceiptTests {
         Checkout checkout = new Checkout();
         checkout.scan("A");
         String expected =  "A: 50\nTotal: 50";
+        // I would avoid this pattern as failure won't give meaningful information about the failure
         Assertions.assertTrue(checkout.receipt().equals(expected));
     }
 
@@ -24,6 +25,7 @@ class ReceiptTests {
         Checkout checkout = new Checkout();
         checkout.scan("A");
         String expected =  "A: 50\nTotal: 50";
+        // I would avoid this pattern as failure won't give meaningful information about the failure
         Assertions.assertTrue(checkout.receipt().contains(expected));
     }
 
