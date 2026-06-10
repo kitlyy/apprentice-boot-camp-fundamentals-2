@@ -20,7 +20,7 @@ public class LoyaltyCard {
         return pointBalance;
     }
 
-    public void makePurchase(int i) {
-
+    public void makePurchase(int purchaseCost) {
+        pointBalance += getPointsFromPurchaseCost(purchaseCost);
     }
 }
