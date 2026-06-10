@@ -1,0 +1,20 @@
+Extract 3-5 requirements relating to generation of customer bills
+
+dealer 50, private 20
+
+1.
+a. AS A customer, private seller or retailer
+b. I WANT the system to create an advert to be posted with the correct corresponding details
+c. SO THAT it can display the correct information can be posted on third party websites
+
+2.
+a. AS A private seller
+b. I WANT the system to apply the private seller rate of 20
+c. SO THAT I am charged correctly
+
+3.
+a. AS A retailer
+b. I WANT the system to apply the retailer rate of 20
+c. SO THAT I am charged correctly
+
+4.

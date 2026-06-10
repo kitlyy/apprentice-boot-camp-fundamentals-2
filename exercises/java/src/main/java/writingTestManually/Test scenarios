@@ -1,0 +1,14 @@
+super car market
+GIVEN a dealer has 1000 adverts with 1 enhancement
+WHEN the months bill is generated
+THEN the total will be 50010
+
+Kaylia
+GIVEN a private seller has 3 adverts with 2 enhancements
+WHEN the months bill is generated
+THEN the total cost will be 80
+
+Jan
+GIVEN a private seller has 1 advert with 1 enhancement
+WHEN the months bill is generated
+THEN the total will be 30

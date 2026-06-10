@@ -1,0 +1,15 @@
+write descriptive test names for following test cases:
+
+1. Withdrawing £50 from £100 balance (success)
+canWithdrawIfAmountIsLessThanAccountBalance
+can_withdraw_if_amount_is_less_than_account_balance
+allowed to withdraw if the amount being withdrawn is less than the balance in the account
+given a withdrawal amount of £50, when withdrawing from a balance of £100, then balance is reduced by £50 to give £50
+withdraw(50), balance is changed to £50
+
+2. Withdrawing £150 from £100 balance (failure due to insufficient funds)
+cannotWithdrawIfAmountIfGreaterThanBalance
+cannot_withdraw_if_amount_is_greater_than_balance
+is not allowed to withdraw if the amount being withdrawn is greater than the balance in th account
+given a withdrawal amount of £150, when withdrawing from a balance of £100, then the transaction fails
+withdraw(50), balance is not changed at all
