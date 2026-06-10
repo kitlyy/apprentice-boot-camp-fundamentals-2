@@ -24,12 +24,15 @@ public class LoyaltyTest {
         Assertions.assertEquals(expected, actual);
     }
 
-//    @Test void purchaseOfCost74And124Gives() {
-//        LoyaltyCard card = new LoyaltyCard();
-//        int expected = 222;
-//
-//        int actual = card.getTotalPoints();
-//
-//        Assertions.assertEquals(expected, actual);
-//    }
+    @Test void purchaseOf74And124MakesBalance222() {
+        LoyaltyCard card = new LoyaltyCard();
+        int expected = 222;
+
+        //act
+        card.makePurchase(74);
+        card.makePurchase(124);
+        int actual = card.getPointBalance();
+
+        Assertions.assertEquals(expected, actual);
+    }
 }

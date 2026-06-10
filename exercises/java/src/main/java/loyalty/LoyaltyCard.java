@@ -12,4 +12,15 @@ public class LoyaltyCard {
             return (int) (100 + 2*(purchaseCost-100));
         }
     }
+    
+
+    
+    
+    public int getPointBalance() {
+        return pointBalance;
+    }
+
+    public void makePurchase(int i) {
+
+    }
 }
