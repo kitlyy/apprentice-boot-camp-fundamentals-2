@@ -27,10 +27,10 @@ public class Main {
 
 
         //running unit tests
-        givenRetailerWith20AdsAnd1EnhancementReturn1010();
-        givenRetailerWith1000AdsAnd1EnhancementReturn50010();
-        givenPrivateWith3AdsAnd2EnhancementReturn80();
-        givenPrivateWith1AdsAnd1EnhancementReturn30();
+        givenRetailerWith20AdsAnd1Enhancement();
+        givenRetailerWith1000AdsAnd1Enhancement();
+        givenPrivateWith3AdsAnd2Enhancement();
+        givenPrivateWith1AdsAnd1Enhancement();
     }
 
 
@@ -45,7 +45,7 @@ public class Main {
 
     }
 
-    static void givenRetailerWith20AdsAnd1EnhancementReturn1010() {
+    static void givenRetailerWith20AdsAnd1Enhancement() {
         //arrange
         int numberOfAdverts = 20;
         String customer = "retailer";
@@ -57,11 +57,11 @@ public class Main {
         if (actual == expected) {
             System.out.println("test passed");
         } else {
-            System.out.println("test failed");
+            System.out.println("test failed. Expected:  " + expected + " Actual: " + actual);
         }
     }
 
-    static void givenRetailerWith1000AdsAnd1EnhancementReturn50010() {
+    static void givenRetailerWith1000AdsAnd1Enhancement() {
         //arrange
         int numberOfAdverts = 1000;
         String customer = "retailer";
@@ -73,13 +73,13 @@ public class Main {
         if (actual == expected) {
             System.out.println("test passed");
         } else {
-            System.out.println("test failed");
+            System.out.println("test failed. Expected:  " + expected + " Actual: " + actual);
         }
     }
 
 
 
-    static void givenPrivateWith3AdsAnd2EnhancementReturn80() {
+    static void givenPrivateWith3AdsAnd2Enhancement() {
         //arrange
         int numberOfAdverts = 3;
         String customer = "private";
@@ -91,11 +91,11 @@ public class Main {
         if (actual == expected) {
             System.out.println("test passed");
         } else {
-            System.out.println("test failed");
+            System.out.println("test failed. Expected:  " + expected + " Actual: " + actual);
         }
     }
 
-    static void givenPrivateWith1AdsAnd1EnhancementReturn30() {
+    static void givenPrivateWith1AdsAnd1Enhancement() {
         //arrange
         int numberOfAdverts = 1;
         String customer = "retailer";
@@ -107,7 +107,7 @@ public class Main {
         if (actual == expected) {
             System.out.println("test passed");
         } else {
-            System.out.println("test failed");
+            System.out.println("test failed. Expected:  " + expected + " Actual: " + actual);
         }
     }
 
