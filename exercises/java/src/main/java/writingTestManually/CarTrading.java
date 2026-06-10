@@ -2,7 +2,7 @@ package writingTestManually;
 
 
 
-public class Main {
+public class CarTrading {
     public static boolean isEligibleToVote(int age) {
         return age >= 18;
     }
@@ -98,7 +98,7 @@ public class Main {
     static void givenPrivateWith1AdsAnd1Enhancement() {
         //arrange
         int numberOfAdverts = 1;
-        String customer = "retailer";
+        String customer = "private";
         int enhancements = 1;
         int expected = 30;
         //act
