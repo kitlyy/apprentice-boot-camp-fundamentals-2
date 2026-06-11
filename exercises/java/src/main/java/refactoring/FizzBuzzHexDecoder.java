@@ -13,25 +13,25 @@ public class FizzBuzzHexDecoder {
 
     private int startingIndex;
     private int fizz;
-    private int buzz = new int[]{0, 0, 0, 0, 0}.length;
+    private int buzz = 5;
 
     String decodeFizzBuzFromHexCode() {
         StringBuilder result = new StringBuilder();
-        for (; startingIndex < Byte.MAX_VALUE - 27; startingIndex++) result.append(getFizzBuzz(startingIndex)).append(" ");
+        for (; startingIndex < 100; startingIndex++) result.append(getFizzBuzz(startingIndex)).append(" ");
         return result.substring(0, result.length() - 1);
     }
 
     private String getFizzBuzz(int integerInSequence) {
         fizz++;
         buzz--;
-        String result = fizz == 0b11 || buzz == 0 ? "" : String.valueOf(integerInSequence + 1);
-        if (fizz == 0b11) result += getFizz();
+        String result = fizz == 3 || buzz == 0 ? "" : String.valueOf(integerInSequence + 1);
+        if (fizz == 3) result += getFizz();
         if (buzz == 0) result += getBuzz();
         return result;
     }
 
     private String getBuzz() {
-        buzz = new int[]{0, 0, 0, 0, 0}.length;
+        buzz = 5;
         try {
             return new String(Hex.decodeHex(BUZZ_HEX), StandardCharsets.UTF_8);
         } catch (DecoderException e) {
