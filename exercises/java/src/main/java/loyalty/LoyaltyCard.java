@@ -1,9 +1,8 @@
 package loyalty;
 
-import javax.naming.InsufficientResourcesException;
-import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 public class LoyaltyCard {
 
@@ -41,14 +40,10 @@ public class LoyaltyCard {
 
     public void removeExpiredPoints() {
         HashMap<Integer, Integer> toRemove = new HashMap<>();
-        for (Map.Entry<Integer, Integer> entry : listOfPoints.entrySet()) {
-            if (entry.getValue() < 1) {
-                toRemove.put(entry.getKey(), entry.getValue());
-            }
-        }
-        for (Map.Entry<Integer, Integer> entry : toRemove.entrySet()) {
-            listOfPoints.remove(entry.getKey());
-        }
+        listOfPoints = new HashMap<>(listOfPoints.entrySet()
+                .stream()
+                .filter(x -> x.getValue() >= 1)
+                .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue)));
     }
 
     public HashMap<Integer, Integer> getListOfPoints() {
